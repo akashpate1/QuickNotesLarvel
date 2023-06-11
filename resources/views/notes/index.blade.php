@@ -20,14 +20,14 @@
                 <div class="my-6 mb-4 p-6 bg-white border-b border-gray-200 shadow-sm sm:rounded-lg">
                     <h2 class="font-bold text-2xl">
                         @if(request()->routeIs('notes.index'))
-                            <a href="{{ route("notes.show",$note) }}">{{ $note->title }}</a>
+                            <a href="{{ route("notes.edit",$note) }}">{{ $note->title }}</a>
                         @else
                             <a href="{{ route("trash.notes.show",$note) }}">{{ $note->title }}</a>
                         @endif
                     </h2>
-                    <p class="mt-2">
-                        {{ Str::limit($note->text,200)  }}
-                    </p>
+{{--                    <p class="mt-2">--}}
+{{--                        {{ Str::limit(strip_tags($note->text),200)  }}--}}
+{{--                    </p>--}}
                     <span class="block mt-4 text-sm opacity-70">{{ $note->updated_at->diffForHumans()  }}</span>
                 </div>
                 @empty

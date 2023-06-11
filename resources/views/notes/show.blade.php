@@ -1,4 +1,5 @@
 <x-app-layout>
+    <x-editorjs :edit="1" :readonly="1" :data="$note->text"></x-editorjs>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ !$note->trashed()  ? __('Notes') : __('Trash') }}
@@ -42,10 +43,12 @@
                 @endif
             </div>
                 <div class="my-6 mb-4 p-6 bg-white border-b border-gray-200 shadow-sm sm:rounded-lg">
-                    <h2 class="font-bold text-4xl">
+                    <h2 class="font-bold text-3xl text-gray-600">
                         {{ $note->title }}
                     </h2>
-                    <p class="mt-5 whitespace-pre-wrap">{{ $note->text }}</p>
+
+                </div>
+                <div id="editor" class="my-6 mb-4 p-6 bg-white border-b border-gray-200 shadow-sm sm:rounded-lg">
                 </div>
         </div>
     </div>

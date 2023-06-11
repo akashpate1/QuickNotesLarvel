@@ -13,3 +13,12 @@
         @apply inline-block px-4 py-2 bg-red-600 rounded-md font-bold text-sm text-white uppercase tracking-widest hover:bg-red-700 active:bg-red-700 focus:ring ring-red-300;
     }
 }
+
+.ce-block__content,
+.ce-toolbar__content {
+    width: 100vw;
+}
+
+.codex-editor > .codex-editor__redactor{
+    padding-bottom: 50px !important;
+}

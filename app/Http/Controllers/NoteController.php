@@ -91,7 +91,7 @@ class NoteController extends Controller
             'text' => $request->text
         ]);
 
-        return to_route("notes.show",$note)->with("success","Note updated successfully");;
+        return to_route("notes.edit",$note)->with("success","Note updated successfully");;
     }
 
     /**
